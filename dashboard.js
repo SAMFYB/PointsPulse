@@ -14,13 +14,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Last entry is the latest snapshot
       const lastEntry = history[history.length - 1];
-      const dateStr = new Date(lastEntry.timestamp).toLocaleString();
+      const dateStr = new Date(lastEntry.timestamp).toLocaleString('en-US', {
+        year: 'numeric',
+        month: 'numeric',
+        day: 'numeric',
+        hour: 'numeric',
+        minute: 'numeric',
+        hour12: true // Use 12-hour format (AM/PM)
+      });
 
       // Prepare for the table
       tableRows.push(`
         <tr>
           <td>${displayName}</td>
-          <td>${lastEntry.balance}</td>
+          <td>${Number(lastEntry.balance).toLocaleString('en-US')}</td>
           <td>${dateStr}</td>
         </tr>
       `);

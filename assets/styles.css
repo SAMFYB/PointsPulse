@@ -1,15 +1,88 @@
-table {
-  border-collapse: collapse;
-  margin-top: 1em;
-  width: 100%;
+/* assets/styles.css */
+
+/* 1. Base Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5; /* Light gray background for a clean look */
+  color: #333; /* Dark gray text for better readability */
+  margin: 0;
+  padding: 20px;
+  font-size: 18px; /* Larger base font size for improved readability */
 }
-th, td {
-  border: 1px solid #ccc;
-  padding: 0.5em 1em;
-}
-th {
-  background-color: #f0f0f0;
-}
+
+/* 2. Centered Title */
 h1 {
-  font-family: sans-serif;
+  text-align: center; /* Center the title */
+  font-size: 2.5em; /* Increase font size */
+  color: #2c3e50; /* Dark blue-gray color for the title */
+  margin-bottom: 40px; /* Space below the title */
+}
+
+/* 3. Balances Section */
+#balances {
+  max-width: 900px; /* Set a maximum width for the container */
+  margin: 0 auto 60px auto; /* Center the container and add bottom margin */
+  padding: 20px;
+  background-color: #ffffff; /* White background for the table container */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* 4. Styled Table */
+#balances table {
+  width: 100%; /* Full width */
+  border-collapse: collapse; /* Remove default borders */
+  font-size: 1.1em; /* Slightly larger font for table text */
+}
+
+#balances table thead tr {
+  background-color: #4CAF50; /* Green background for header */
+  color: #ffffff; /* White text for header */
+  text-align: left;
+}
+
+#balances table th,
+#balances table td {
+  padding: 15px 20px; /* Adequate padding for cells */
+}
+
+#balances table tbody tr {
+  border-bottom: 1px solid #dddddd; /* Light gray border between rows */
+}
+
+#balances table tbody tr:nth-child(even) {
+  background-color: #f9f9f9; /* Light gray background for even rows */
+}
+
+#balances table tbody tr:hover {
+  background-color: #f1f1f1; /* Slightly darker gray on hover */
+}
+
+#balances table tbody tr:last-of-type {
+  border-bottom: 2px solid #4CAF50; /* Thicker border for the last row */
+}
+
+/* 5. No Balances Message */
+#balances p {
+  text-align: center; /* Center the message */
+  font-size: 1.2em; /* Slightly larger font */
+  color: #555555; /* Medium gray text */
+}
+
+/* 6. Charts Section */
+canvas {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 40px auto; /* Center the canvas and add bottom margin */
+}
+
+/* 7. Accessibility Enhancements */
+#balances table th {
+  scope: col; /* Define scope for accessibility */
+}
+
+#balances table th,
+#balances table td {
+  text-align: left; /* Ensure left alignment for readability */
 }
