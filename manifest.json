@@ -1,0 +1,43 @@
+{
+  "name": "My Loyalty",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "description": "Track loyalty balances.",
+  "icons": {
+  },
+  // We'll use a service worker for background tasks
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "storage",
+    "scripting",
+    "activeTab"
+  ],
+  // We define a default popup when user clicks extension icon
+  "action": {
+    "default_popup": "popup.html"
+  },
+  // Content script injection on loyalty program domains
+  "content_scripts": [
+    {
+      "matches": ["https://www.aa.com/aadvantage-program/profile/account-summary"],
+      "js": ["content-scripts/aa-content.js"]
+    },
+    {
+      "matches": ["https://www.delta.com/myprofile/personal-details"],
+      "js": ["content-scripts/delta-content.js"]
+    }
+  ],
+  // We need these files to be accessible so we can load them in the dashboard
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "dashboard.html",
+        "assets/chart.min.js",
+        "assets/styles.css"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
