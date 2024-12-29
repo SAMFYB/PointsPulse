@@ -18,6 +18,7 @@
     "activeTab"
   ],
   "host_permissions": [
+    "*://*.americanexpress.com/*",
     "*://*.aa.com/*",
     "*://*.delta.com/*",
     "*://*.united.com/*"
@@ -28,6 +29,10 @@
   },
   // Content script injection on loyalty program domains
   "content_scripts": [
+    {
+      "matches": ["https://global.americanexpress.com/overview"],
+      "js": ["content-scripts/scrape-amex.js"]
+    },
     {
       "matches": ["https://www.aa.com/aadvantage-program/profile/account-summary"],
       "js": ["content-scripts/scrape-aa.js"]
