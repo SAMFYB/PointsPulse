@@ -1,4 +1,4 @@
-// This runs in the context of an Delta page, scrapes the balance, sends a message.
+// This runs in the context of a Delta page, scrapes the balance, sends a message.
 (function() {
   const config = {
     programKey: "deltaAirlines",

@@ -16,7 +16,8 @@
   ],
   "host_permissions": [
     "*://*.aa.com/*",
-    "*://*.delta.com/*"
+    "*://*.delta.com/*",
+    "*://*.united.com/*"
   ],
   // We define a default popup when user clicks extension icon
   "action": {
@@ -31,6 +32,10 @@
     {
       "matches": ["https://www.delta.com/myprofile/personal-details"],
       "js": ["content-scripts/scrape-delta.js"]
+    },
+    {
+      "matches": ["https://www.united.com/en/us/myunited"],
+      "js": ["content-scripts/scrape-united.js"]
     }
   ],
   // We need these files to be accessible so we can load them in the dashboard
