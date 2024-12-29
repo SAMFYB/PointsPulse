@@ -22,11 +22,11 @@
   "content_scripts": [
     {
       "matches": ["https://www.aa.com/aadvantage-program/profile/account-summary"],
-      "js": ["content-scripts/aa-content.js"]
+      "js": ["content-scripts/scrape-aa.js"]
     },
     {
       "matches": ["https://www.delta.com/myprofile/personal-details"],
-      "js": ["content-scripts/delta-content.js"]
+      "js": ["content-scripts/scrape-delta.js"]
     }
   ],
   // We need these files to be accessible so we can load them in the dashboard
