@@ -1,6 +1,6 @@
 {
-  "name": "My Loyalty",
-  "version": "1.0.0",
+  "name": "PointsPulse",
+  "version": "1.1.0",
   "manifest_version": 3,
   "description": "Track loyalty balances.",
   "icons": {

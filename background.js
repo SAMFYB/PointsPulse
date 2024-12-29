@@ -2,7 +2,7 @@
 
 // Runs once when the extension is installed or updated
 chrome.runtime.onInstalled.addListener(() => {
-  console.log("[Background] My Loyalty extension installed or updated.");
+  console.log("[Background] PointsPulse extension installed or updated.");
 });
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
