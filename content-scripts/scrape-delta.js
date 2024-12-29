@@ -9,7 +9,7 @@
     parsers: {
       balance: (balanceElem) => {
         // Select all <dl> elements within the container
-        const dlElements = containerElem.querySelectorAll('dl.idp-header__medallion-column--child');
+        const dlElements = balanceElem.querySelectorAll('dl.idp-header__medallion-column--child');
         console.log("[Delta Content Script] Found", dlElements.length, "<dl> elements.");
 
         // Iterate through each <dl> to find the one with <dt> "MILES AVAILABLE"
