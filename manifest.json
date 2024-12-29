@@ -21,7 +21,8 @@
     "*://*.americanexpress.com/*",
     "*://*.aa.com/*",
     "*://*.delta.com/*",
-    "*://*.united.com/*"
+    "*://*.united.com/*",
+    "*://*.hilton.com/*"
   ],
   // We define a default popup when user clicks extension icon
   "action": {
@@ -44,6 +45,10 @@
     {
       "matches": ["https://www.united.com/en/us/myunited"],
       "js": ["content-scripts/scrape-united.js"]
+    },
+    {
+      "matches": ["https://www.hilton.com/en/hilton-honors/guest/my-account/"],
+      "js": ["content-scripts/scrape-hilton.js"]
     }
   ],
   // We need these files to be accessible so we can load them in the dashboard
