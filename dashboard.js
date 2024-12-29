@@ -5,8 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const programData = result.programData || {};
 
     // We will collect data for display
-    const programNames = [];
-    const latestBalances = [];
     const tableRows = [];
 
     // For each program in programData, we want the latest entry from history
@@ -26,10 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
           <td>${dateStr}</td>
         </tr>
       `);
-
-      // For chart data
-      programNames.push(displayName);
-      latestBalances.push(lastEntry.balance);
     });
 
     // Render the table
@@ -52,29 +46,5 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       balancesDiv.innerHTML = `<p>No balances found yet. Visit your loyalty sites!</p>`;
     }
-
-    // Build the chart
-    const ctx = document.getElementById("balanceChart").getContext("2d");
-    new Chart(ctx, {
-      type: "bar",
-      data: {
-        labels: programNames,
-        datasets: [{
-          label: "Points/Miles",
-          data: latestBalances,
-          backgroundColor: "rgba(54, 162, 235, 0.7)",
-          borderColor: "rgba(54, 162, 235, 1)",
-          borderWidth: 1
-        }]
-      },
-      options: {
-        responsive: true,
-        scales: {
-          y: {
-            beginAtZero: true
-          }
-        }
-      }
-    });
   });
 });

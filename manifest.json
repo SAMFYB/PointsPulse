@@ -38,7 +38,6 @@
     {
       "resources": [
         "dashboard.html",
-        "assets/chart.min.js",
         "assets/styles.css"
       ],
       "matches": ["<all_urls>"]
