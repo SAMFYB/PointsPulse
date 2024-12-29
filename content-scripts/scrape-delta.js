@@ -4,15 +4,30 @@
     programKey: "deltaAirlines",
     displayName: "Delta Airlines",
     selectors: {
-      balance: 'dd.idp-header__medallion-number-title'
+      balance: 'div.idp-header__medallion-column'
     },
     parsers: {
       balance: (balanceElem) => {
-        const rawBalance = balanceElem.textContent.trim();
-        console.log("[Delta Content Script] Raw balance text:", rawBalance);
-        const numericBalance = parseInt(rawBalance.replace(/,/g, ""), 10);
-        console.log("[Delta Content Script] Parsed numeric balance:", numericBalance);
-        return numericBalance;
+        // Select all <dl> elements within the container
+        const dlElements = containerElem.querySelectorAll('dl.idp-header__medallion-column--child');
+        console.log("[Delta Content Script] Found", dlElements.length, "<dl> elements.");
+
+        // Iterate through each <dl> to find the one with <dt> "MILES AVAILABLE"
+        for (let dl of dlElements) {
+          const dt = dl.querySelector('dt.idp-header__medallion-sub-title');
+          if (dt && dt.textContent.trim() === 'MILES AVAILABLE') {
+            const dd = dl.querySelector('dd.idp-header__medallion-number-title');
+            if (dd) {
+              const rawBalance = dd.textContent.trim();
+              console.log("[Delta Content Script] Raw balance text:", rawBalance);
+              const numericBalance = parseInt(rawBalance.replace(/,/g, ""), 10);
+              console.log("[Delta Content Script] Parsed numeric balance:", numericBalance);
+              return numericBalance;
+            }
+          }
+        }
+        console.log("[Delta Content Script] 'MILES AVAILABLE' section not found within container.");
+        return NaN;
       }
     }
   };
