@@ -1,6 +1,14 @@
 // This runs in the context of an Delta page, scrapes the balance, sends a message.
 (function() {
-  const balanceElem = document.querySelector("#balance-amount");
+  const config = {
+    programKey: "deltaAirlines",
+    displayName: "Delta Airlines",
+    selectors: {
+      balance: ''
+    }
+  };
+
+  const balanceElem = document.querySelector(config.selectors.balance);
   if (!balanceElem) return;
 
   const rawBalance = balanceElem.textContent.trim();
@@ -10,9 +18,9 @@
   // Send to background script
   chrome.runtime.sendMessage({
     type: "UPDATE_BALANCE",
-    programKey: "deltaAirlines",
+    programKey: config.programKey,
     newBalance: numericBalance,
-    displayName: "Delta Airlines"
+    displayName: config.displayName
   }, (response) => {
     // Optional callback if needed
     console.log("Background responded:", response);
