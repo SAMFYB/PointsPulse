@@ -4,6 +4,9 @@
   "manifest_version": 3,
   "description": "Track loyalty balances.",
   "icons": {
+    "16": "assets/icons/icon.png",
+    "48": "assets/icons/icon.png",
+    "128": "assets/icons/icon.png"
   },
   // We'll use a service worker for background tasks
   "background": {
