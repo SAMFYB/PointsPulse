@@ -14,6 +14,10 @@
     "scripting",
     "activeTab"
   ],
+  "host_permissions": [
+    "*://*.aa.com/*",
+    "*://*.delta.com/*"
+  ],
   // We define a default popup when user clicks extension icon
   "action": {
     "default_popup": "popup.html"
