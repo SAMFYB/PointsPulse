@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Prepare for the table
       tableRows.push(`
-        <tr>
+        <tr data-program-key="${programKey}">
           <td>${displayName}</td>
           <td>${Number(lastEntry.balance).toLocaleString('en-US')}</td>
           <td>${dateStr}</td>
@@ -50,6 +50,19 @@ document.addEventListener("DOMContentLoaded", () => {
           </tbody>
         </table>
       `;
+
+      // Add click event listeners to each row
+      const rows = balancesDiv.querySelectorAll('tbody tr');
+      rows.forEach((row) => {
+        row.addEventListener('click', () => {
+          const programKey = row.getAttribute('data-program-key');
+          if (programKey) {
+            // Navigate to history.html with the programKey as a query parameter
+            const historyPage = `history.html?program=${encodeURIComponent(programKey)}`;
+            window.location.href = historyPage;
+          }
+        });
+      });
     } else {
       balancesDiv.innerHTML = `<p>No balances found yet. Visit your loyalty sites!</p>`;
     }
