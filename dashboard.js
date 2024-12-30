@@ -4,7 +4,18 @@ document.addEventListener("DOMContentLoaded", () => {
   chrome.storage.local.get(["programData"], (result) => {
     const programData = result.programData || {};
 
-    // We will collect data for display
+    // 1. Hardcoded Valuation Data (Valuation per point/mile)
+    const valuationData = {
+      amexRewards: 0.01,        // $0.01 per point
+      deltaAirlines: 0.015,     // $0.015 per mile
+      hiltonHonors: 0.005,      // $0.005 per point
+      // Add other programs and their valuations here
+    };
+
+    // 2. Hardcoded Valuation Update Timestamp
+    const valuationUpdateTimestamp = "2024-04-25 10:30 AM"; // Update this manually as needed
+
+    // 3. We will collect data for display
     const tableRows = [];
 
     // For each program in programData, we want the latest entry from history
@@ -23,17 +34,27 @@ document.addEventListener("DOMContentLoaded", () => {
         hour12: true // Use 12-hour format (AM/PM)
       });
 
-      // Prepare for the table
+      // Retrieve the valuation for the program; default to 0 if not defined
+      const valuationPerPoint = valuationData[programKey] || 0;
+      const valuationFormatted = valuationPerPoint > 0 ? `$${valuationPerPoint.toFixed(4)}` : "N/A";
+
+      // Calculate the total worth
+      const totalWorth = valuationPerPoint > 0 ? (lastEntry.balance * valuationPerPoint) : 0;
+      const totalWorthFormatted = valuationPerPoint > 0 ? `$${totalWorth.toFixed(2)}` : "N/A";
+
+      // Prepare for the table with new columns inserted between Balance and Last Updated
       tableRows.push(`
         <tr data-program-key="${programKey}">
           <td>${displayName}</td>
           <td>${Number(lastEntry.balance).toLocaleString('en-US')}</td>
+          <td>${valuationFormatted}</td>
+          <td>${totalWorthFormatted}</td>
           <td>${dateStr}</td>
         </tr>
       `);
     });
 
-    // Render the table
+    // 4. Render the table
     const balancesDiv = document.getElementById("balances");
     if (tableRows.length > 0) {
       balancesDiv.innerHTML = `
@@ -42,6 +63,8 @@ document.addEventListener("DOMContentLoaded", () => {
             <tr>
               <th>Program</th>
               <th>Balance</th>
+              <th>Valuation</th>
+              <th>Total Worth</th>
               <th>Last Updated</th>
             </tr>
           </thead>
@@ -49,6 +72,9 @@ document.addEventListener("DOMContentLoaded", () => {
             ${tableRows.join("")}
           </tbody>
         </table>
+        <p style="text-align: center; margin-top: 20px; font-size: 1em; color: #555;">
+          Valuation data last updated on ${valuationUpdateTimestamp}
+        </p>
       `;
 
       // Add click event listeners to each row
