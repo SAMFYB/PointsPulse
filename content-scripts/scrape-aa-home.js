@@ -1,10 +1,10 @@
-// This runs in the context of an AA account summary page, scrapes the balance, sends a message.
+// This runs in the context of an AA home page, scrapes the balance, sends a message.
 (function() {
   const config = {
     programKey: "American_Airlines_AAdvantage",
     displayName: "American Airlines",
     selectors: {
-      balance: 'div[data-testid="award-miles-balance-text"]'
+      balance: '.account-container .member-info--miles'
     },
     parsers: {
       balance: (balanceElem) => {

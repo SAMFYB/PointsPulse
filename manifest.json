@@ -40,6 +40,10 @@
       "js": ["content-scripts/scrape-bilt.js"]
     },
     {
+      "matches": ["https://www.aa.com/homePage.do"],
+      "js": ["content-scripts/scrape-aa-home.js"]
+    },
+    {
       "matches": ["https://www.aa.com/aadvantage-program/profile/account-summary"],
       "js": ["content-scripts/scrape-aa-account-summary.js"]
     },
