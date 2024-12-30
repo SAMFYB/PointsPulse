@@ -47,14 +47,14 @@ function displayHistoricalData(programKey) {
     const tableRows = sortedHistory.map((entry) => {
       const dateStr = new Date(entry.timestamp).toLocaleString('en-US', {
         year: 'numeric',
-        month: 'long',
+        month: 'numeric',
         day: 'numeric',
         hour: 'numeric',
         minute: 'numeric',
-        hour12: true
+        hour12: true // Use 12-hour format (AM/PM)
       });
-      const balanceFormatted = typeof entry.balance === 'number' ? 
-        entry.balance.toLocaleString('en-US') : 
+      const balanceFormatted = typeof entry.balance === 'number' ?
+        entry.balance.toLocaleString('en-US') :
         entry.balance; // Handle if balance is a number or string
 
       return `
