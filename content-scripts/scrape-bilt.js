@@ -32,7 +32,7 @@
 
       const numericBalance = config.parsers.balance(balanceElem);
 
-      if (!isNaN(numericBalance)) {
+      if (!isNaN(numericBalance) && numericBalance > 0) {
         console.log(`[Bilt Content Script] Balance parsed: ${numericBalance}. Sending to background...`);
 
         // Send to background script
@@ -48,7 +48,7 @@
         // Stop polling since we've successfully sent the balance
         clearInterval(intervalId);
       } else {
-        console.log("[Bilt Content Script] Parsed balance is NaN. Retrying...");
+        console.log("[Bilt Content Script] Parsed balance is NaN or 0. Retrying...");
       }
     } else {
       console.log("[Bilt Content Script] Balance element not found. Retrying...");
