@@ -19,6 +19,7 @@
   ],
   "host_permissions": [
     "*://*.americanexpress.com/*",
+    "*://*.biltrewards.com/*",
     "*://*.aa.com/*",
     "*://*.delta.com/*",
     "*://*.united.com/*",
@@ -33,6 +34,10 @@
     {
       "matches": ["https://global.americanexpress.com/overview"],
       "js": ["content-scripts/scrape-amex.js"]
+    },
+    {
+      "matches": ["https://www.biltrewards.com/"],
+      "js": ["content-scripts/scrape-bilt.js"]
     },
     {
       "matches": ["https://www.aa.com/aadvantage-program/profile/account-summary"],
