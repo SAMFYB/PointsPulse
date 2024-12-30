@@ -21,7 +21,7 @@ h1 {
 /* 3. Balances Section */
 #balances,
 #history {
-  max-width: 900px; /* Set a maximum width for the container */
+  max-width: 1200px; /* Set a maximum width for the container */
   margin: 0 auto 60px auto; /* Center the container and add bottom margin */
   padding: 20px;
   background-color: #ffffff; /* White background for the table container */

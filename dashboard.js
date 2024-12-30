@@ -70,11 +70,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Retrieve the valuation for the program; default to 0 if not defined
       const valuationPerPoint = valuationData[programKey] || 0;
-      const valuationFormatted = valuationPerPoint > 0 ? `$${valuationPerPoint.toFixed(4)}` : "N/A";
+      const valuationFormatted = valuationPerPoint > 0 ? `${valuationPerPoint.toFixed(2)}` : "N/A";
 
       // Calculate the total worth
-      const totalWorth = valuationPerPoint > 0 ? (lastEntry.balance * valuationPerPoint) : 0;
-      const totalWorthFormatted = valuationPerPoint > 0 ? `$${totalWorth.toFixed(2)}` : "N/A";
+      const totalWorth = valuationPerPoint > 0 ? (lastEntry.balance * valuationPerPoint / 100) : 0;
+      const totalWorthFormatted = valuationPerPoint > 0 ?
+        `$${Number(totalWorth.toFixed(0)).toLocaleString('en-US')}` : "N/A";
 
       // Prepare for the table with new columns inserted between Balance and Last Updated
       tableRows.push(`
