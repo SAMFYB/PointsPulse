@@ -1,7 +1,7 @@
 // This runs in the context of a Hilton page, scrapes the balance, sends a message.
 (function() {
   const config = {
-    programKey: "hiltonHonors",
+    programKey: "Hilton_Honors",
     displayName: "Hilton Honors",
     selectors: {
       balance: 'div[data-testid="honorsPointsBlock"]'

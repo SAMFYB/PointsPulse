@@ -1,7 +1,7 @@
 // This runs in the context of an Amex page, scrapes the balance, sends a message.
 (function() {
   const config = {
-    programKey: "amex",
+    programKey: "American_Express_Membership_Rewards",
     displayName: "American Express Membership Rewards",
     selectors: {},
     parsers: {

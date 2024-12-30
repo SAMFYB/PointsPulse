@@ -1,7 +1,7 @@
 // This runs in the context of an AA page, scrapes the balance, sends a message.
 (function() {
   const config = {
-    programKey: "americanAirlines",
+    programKey: "American_Airlines_AAdvantage",
     displayName: "American Airlines",
     selectors: {
       balance: 'div[data-testid="award-miles-balance-text"]'

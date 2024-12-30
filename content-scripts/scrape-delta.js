@@ -1,7 +1,7 @@
 // This runs in the context of a Delta page, scrapes the balance, sends a message.
 (function() {
   const config = {
-    programKey: "deltaAirlines",
+    programKey: "Delta_Air_Lines_SkyMiles",
     displayName: "Delta Airlines",
     selectors: {
       balance: 'div.idp-header__medallion-column'

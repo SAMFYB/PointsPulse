@@ -1,7 +1,7 @@
 // This runs in the context of a United page, scrapes the balance, sends a message.
 (function() {
   const config = {
-    programKey: "unitedAirlines",
+    programKey: "United_Airlines_MileagePlus",
     displayName: "United Airlines",
     selectors: {
       balance: 'div[class*="MileageBalance__milesContainer"] div[class*="MileageBalance__totalMiles"] span'

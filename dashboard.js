@@ -6,14 +6,48 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 1. Hardcoded Valuation Data (Valuation per point/mile)
     const valuationData = {
-      amexRewards: 0.01,        // $0.01 per point
-      deltaAirlines: 0.015,     // $0.015 per mile
-      hiltonHonors: 0.005,      // $0.005 per point
-      // Add other programs and their valuations here
+      // For credit card points and miles
+      American_Express_Membership_Rewards: 2.0,
+      Bilt_Rewards: 2.05,
+      Capital_One: 1.85,
+      Chase_Ultimate_Rewards: 2.05,
+      Citi_ThankYou_Rewards: 1.8,
+      Wells_Fargo_Rewards: 1.6,
+      // For airline points and miles
+      Air_Canada_Aeroplan: 1.5,
+      Alaska_Airlines_Mileage_Plan: 1.45,
+      American_Airlines_AAdvantage: 1.65,
+      All_Nippon_Airways_Mileage_Club: 1.4,
+      Avianca_LifeMiles: 1.6,
+      Avios: 1.4,
+      Cathay_Asia_Miles: 1.3,
+      Delta_Air_Lines_SkyMiles: 1.2,
+      Emirates_Skywards: 1.2,
+      Etihad_Airways_Guest: 1.2,
+      Flying_Blue: 1.3,
+      Frontier_Airlines_Frontier_Miles: 1.1,
+      Hawaiian_Airlines_HawaiianMiles: 1.2,
+      JetBlue_TrueBlue: 1.3,
+      Korean_Air_SkyPass: 1.7,
+      Singapore_Airlines_KrisFlyer: 1.3,
+      Southwest_Airlines_Rapid_Rewards: 1.4,
+      Spirit_Airlines_Free_Spirit: 1.1,
+      Turkish_Airlines_Miles_Smiles: 1.2,
+      United_Airlines_MileagePlus: 1.35,
+      Virgin_Atlantic_Flying_Club: 1.4,
+      // For hotel points
+      Accor_Live_Limitless: 2.0,
+      Best_Western_Rewards: 0.6,
+      Choice_Privileges: 0.6,
+      Hilton_Honors: 0.6,
+      IHG_One_Rewards: 0.5,
+      Marriott_Bonvoy: 0.85,
+      World_of_Hyatt: 1.7,
+      Wyndham_Rewards: 1.1,
     };
 
     // 2. Hardcoded Valuation Update Timestamp
-    const valuationUpdateTimestamp = "2024-04-25 10:30 AM"; // Update this manually as needed
+    const valuationUpdateTimestamp = "12/30/2024, 9:30 AM"; // Update this manually as needed
 
     // 3. We will collect data for display
     const tableRows = [];
