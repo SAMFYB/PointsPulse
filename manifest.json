@@ -41,7 +41,7 @@
     },
     {
       "matches": ["https://www.aa.com/aadvantage-program/profile/account-summary"],
-      "js": ["content-scripts/scrape-aa.js"]
+      "js": ["content-scripts/scrape-aa-account-summary.js"]
     },
     {
       "matches": ["https://www.delta.com/myprofile/personal-details"],
