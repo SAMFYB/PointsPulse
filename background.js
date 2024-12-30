@@ -67,6 +67,13 @@ async function updateBalance(programKey, newBalance, displayName) {
       if (shouldAppend) {
         historyArr.push({ timestamp: now, balance: newBalance });
         console.log(`[Background] Appended new entry: balance=${newBalance}, timestamp=${now}`);
+
+        // Optional: Limit history size to prevent excessive storage usage
+        const MAX_HISTORY_LENGTH = 100;
+        if (historyArr.length > MAX_HISTORY_LENGTH) {
+          historyArr.shift(); // Remove the oldest entry
+          console.log(`[Background] Removed oldest entry to maintain max history length ${MAX_HISTORY_LENGTH}.`);
+        }
       } else {
         console.log("[Background] No new entry appended (not changed or not old enough).");
       }
