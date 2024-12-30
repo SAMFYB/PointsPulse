@@ -49,13 +49,12 @@ document.addEventListener("DOMContentLoaded", () => {
     // 2. Hardcoded Valuation Update Timestamp
     const valuationUpdateTimestamp = "12/30/2024, 9:30 AM"; // Update this manually as needed
 
-    // 3. We will collect data for display
-    const tableRows = [];
+    // 3. Prepare data for display
+    let displayData = [];
 
-    // For each program in programData, we want the latest entry from history
     Object.keys(programData).forEach((programKey) => {
       const { displayName, history } = programData[programKey];
-      if (!history || history.length === 0) return; // skip if no history
+      if (!history || history.length === 0) return; // Skip if no history
 
       // Last entry is the latest snapshot
       const lastEntry = history[history.length - 1];
@@ -77,55 +76,116 @@ document.addEventListener("DOMContentLoaded", () => {
       const totalWorthFormatted = valuationPerPoint > 0 ?
         `$${Number(totalWorth.toFixed(0)).toLocaleString('en-US')}` : "N/A";
 
-      // Prepare for the table with new columns inserted between Balance and Last Updated
-      tableRows.push(`
-        <tr data-program-key="${programKey}">
-          <td>${displayName}</td>
-          <td>${Number(lastEntry.balance).toLocaleString('en-US')}</td>
-          <td>${valuationFormatted}</td>
-          <td>${totalWorthFormatted}</td>
-          <td>${dateStr}</td>
-        </tr>
-      `);
+      // Push the data into displayData array
+      displayData.push({
+        programKey,
+        displayName,
+        balance: lastEntry.balance,
+        balanceFormatted: Number(lastEntry.balance).toLocaleString('en-US'),
+        valuation: valuationPerPoint,
+        valuationFormatted,
+        totalWorth: totalWorth,
+        totalWorthFormatted,
+        lastUpdated: lastEntry.timestamp,
+        lastUpdatedFormatted: dateStr
+      });
     });
 
-    // 4. Render the table
-    const balancesDiv = document.getElementById("balances");
-    if (tableRows.length > 0) {
-      balancesDiv.innerHTML = `
-        <table>
-          <thead>
-            <tr>
-              <th>Program</th>
-              <th>Balance</th>
-              <th>Valuation</th>
-              <th>Total Worth</th>
-              <th>Last Updated</th>
-            </tr>
-          </thead>
-          <tbody>
-            ${tableRows.join("")}
-          </tbody>
-        </table>
-        <p style="text-align: center; margin-top: 20px; font-size: 1em; color: #555;">
-          Valuation data last updated on ${valuationUpdateTimestamp}
-        </p>
-      `;
+    // Function to render the table based on displayData
+    function renderTable(data) {
+      const tableRows = data.map(item => `
+        <tr data-program-key="${item.programKey}">
+          <td>${item.displayName}</td>
+          <td>${item.balanceFormatted}</td>
+          <td>${item.valuationFormatted}</td>
+          <td>${item.totalWorthFormatted}</td>
+          <td>${item.lastUpdatedFormatted}</td>
+        </tr>
+      `).join("");
 
-      // Add click event listeners to each row
-      const rows = balancesDiv.querySelectorAll('tbody tr');
-      rows.forEach((row) => {
-        row.addEventListener('click', () => {
-          const programKey = row.getAttribute('data-program-key');
-          if (programKey) {
-            // Navigate to history.html with the programKey as a query parameter
-            const historyPage = `history.html?program=${encodeURIComponent(programKey)}`;
-            window.location.href = historyPage;
+      const balancesDiv = document.getElementById("balances");
+      if (tableRows.length > 0) {
+        balancesDiv.innerHTML = `
+          <table id="balances-table">
+            <thead>
+              <tr>
+                <th data-sort="program">Program</th>
+                <th data-sort="balance">Balance</th>
+                <th data-sort="valuation">Valuation</th>
+                <th data-sort="totalWorth">Total Worth</th>
+                <th data-sort="lastUpdated">Last Updated</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${tableRows}
+            </tbody>
+          </table>
+          <p style="text-align: center; margin-top: 20px; font-size: 1em; color: #555;">
+            Valuation data last updated on ${valuationUpdateTimestamp}
+          </p>
+        `;
+
+        // Add click event listeners to each row
+        const rows = balancesDiv.querySelectorAll('tbody tr');
+        rows.forEach((row) => {
+          row.addEventListener('click', () => {
+            const programKey = row.getAttribute('data-program-key');
+            if (programKey) {
+              // Navigate to history.html with the programKey as a query parameter
+              const historyPage = `history.html?program=${encodeURIComponent(programKey)}`;
+              window.location.href = historyPage;
+            }
+          });
+        });
+
+        // Add sorting functionality
+        addSortingFunctionality();
+      } else {
+        balancesDiv.innerHTML = `<p>No balances found yet. Visit your loyalty sites!</p>`;
+      }
+    }
+
+    // Function to add sorting functionality
+    function addSortingFunctionality() {
+      const headers = document.querySelectorAll('#balances-table thead th');
+      headers.forEach(header => {
+        header.style.cursor = 'pointer'; // Indicate that headers are clickable
+        header.addEventListener('click', () => {
+          const sortKey = header.getAttribute('data-sort');
+          if (sortKey) {
+            sortTableByColumn(sortKey);
           }
         });
       });
-    } else {
-      balancesDiv.innerHTML = `<p>No balances found yet. Visit your loyalty sites!</p>`;
     }
+
+    // Function to sort the table data based on a specific column
+    function sortTableByColumn(sortKey) {
+      switch (sortKey) {
+        case 'program':
+          displayData.sort((a, b) => a.displayName.localeCompare(b.displayName));
+          break;
+        case 'balance':
+          displayData.sort((a, b) => b.balance - a.balance);
+          break;
+        case 'valuation':
+          displayData.sort((a, b) => b.valuation - a.valuation);
+          break;
+        case 'totalWorth':
+          displayData.sort((a, b) => b.totalWorth - a.totalWorth);
+          break;
+        case 'lastUpdated':
+          displayData.sort((a, b) => b.lastUpdated - a.lastUpdated);
+          break;
+        default:
+          break;
+      }
+
+      // Re-render the table with sorted data
+      renderTable(displayData);
+    }
+
+    // Initial render
+    renderTable(displayData);
   });
 });

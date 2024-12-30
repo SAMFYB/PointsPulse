@@ -44,6 +44,15 @@ h1 {
   text-align: left;
 }
 
+/* Indicate that headers are clickable */
+#balances table thead th {
+  position: relative;
+}
+
+#balances table thead th:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
 #balances table th,
 #balances table td,
 #history table th,
