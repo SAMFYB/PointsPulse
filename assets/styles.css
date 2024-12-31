@@ -24,7 +24,7 @@ h1 {
   max-width: 1200px; /* Set a maximum width for the container */
   margin: 0 auto 60px auto; /* Center the container and add bottom margin */
   padding: 20px;
-  background-color: #ffffff; /* White background for the table container */
+  background-color: #f8f9fa; /* gray 0 background for the table container */
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
@@ -40,7 +40,7 @@ h1 {
 #balances table thead tr,
 #history table thead tr {
   background-color: #4CAF50; /* Green background for header */
-  color: #ffffff; /* White text for header */
+  color: #f8f9fa; /* gray 0 text for header */
   text-align: left;
 }
 
@@ -61,7 +61,7 @@ h1 {
 }
 
 #balances table td a {
-  color: #3498db;
+  color: #1971c2; /* blue 8 for links */
   text-decoration: none;
 }
 
@@ -94,14 +94,14 @@ h1 {
 #history p {
   text-align: center; /* Center the message */
   font-size: 1.2em; /* Slightly larger font */
-  color: #555555; /* Medium gray text */
+  color: #495057; /* gray 7 for no balances message */
 }
 
 /* 6. Back Button */
 #back-button {
   margin-bottom: 20px;
   padding: 8px 16px;
-  background-color: #27ae60;
+  background-color: #2f9e44; /* green 8 for history page back button */
   color: white;
   border: none;
   border-radius: 4px;
@@ -110,7 +110,7 @@ h1 {
 }
 
 #back-button:hover {
-  background-color: #219150;
+  background-color: #2b8a3e; /* green 9 for history page back button on hover */
 }
 
 /* 7. Accessibility Enhancements */

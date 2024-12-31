@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
               ${tableRows}
             </tbody>
           </table>
-          <p style="text-align: center; margin-top: 20px; font-size: 1em; color: #555;">
+          <p style="text-align: center; margin-top: 20px; font-size: 1em; color: #495057; /* gray 7 */">
             Valuation data last updated on ${valuationUpdateTimestamp}
           </p>
         `;
