@@ -50,15 +50,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const programURLs = {
       // For credit card points and miles
-      American_Express_Membership_Rewards: "",
+      American_Express_Membership_Rewards: "https://global.americanexpress.com/overview",
+      Bilt_Rewards: "https://www.biltrewards.com/",
       // For airline points and miles
-      American_Airlines_AAdvantage: "",
+      American_Airlines_AAdvantage: "https://www.aa.com/aadvantage-program/profile/account-summary",
       Avios: "",
       Cathay_Asia_Miles: "",
-      Delta_Air_Lines_SkyMiles: "",
-      United_Airlines_MileagePlus: "",
+      Delta_Air_Lines_SkyMiles: "https://www.delta.com/myprofile/personal-details",
+      United_Airlines_MileagePlus: "https://www.united.com/en/us/myunited",
       // For hotel points
-      Hilton_Honors: "",
+      Hilton_Honors: "https://www.hilton.com/en/hilton-honors/guest/my-account/",
       Marriott_Bonvoy: "",
       World_of_Hyatt: "",
     };
