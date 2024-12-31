@@ -4,7 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
   chrome.storage.local.get(["programData"], (result) => {
     const programData = result.programData || {};
 
-    // 1. Hardcoded Valuation Data (Valuation per point/mile)
+    // 1. Hardcoded Valuation Data (Valuation per point/mile);
+    // Hardcoded mapping of programKey -> official website URL
     const valuationData = {
       // For credit card points and miles
       American_Express_Membership_Rewards: 2.0,
@@ -45,11 +46,24 @@ document.addEventListener("DOMContentLoaded", () => {
       World_of_Hyatt: 1.7,
       Wyndham_Rewards: 1.1,
     };
-
-    // 2. Hardcoded Valuation Update Timestamp
     const valuationUpdateTimestamp = "12/30/2024, 9:30 AM"; // Update this manually as needed
 
-    // 3. Prepare data for display
+    const programURLs = {
+      // For credit card points and miles
+      American_Express_Membership_Rewards: "",
+      // For airline points and miles
+      American_Airlines_AAdvantage: "",
+      Avios: "",
+      Cathay_Asia_Miles: "",
+      Delta_Air_Lines_SkyMiles: "",
+      United_Airlines_MileagePlus: "",
+      // For hotel points
+      Hilton_Honors: "",
+      Marriott_Bonvoy: "",
+      World_of_Hyatt: "",
+    };
+
+    // 2. Prepare data for display
     let displayData = [];
 
     Object.keys(programData).forEach((programKey) => {
@@ -76,10 +90,14 @@ document.addEventListener("DOMContentLoaded", () => {
       const totalWorthFormatted = valuationPerPoint > 0 ?
         `$${Number(totalWorth.toFixed(0)).toLocaleString('en-US')}` : "N/A";
 
+      // Retrieve the official URL
+      const programURL = programURLs[programKey] || "#"; // fallback if not defined
+
       // Push the data into displayData array
       displayData.push({
         programKey,
         displayName,
+        programURL,
         balance: lastEntry.balance,
         balanceFormatted: Number(lastEntry.balance).toLocaleString('en-US'),
         valuation: valuationPerPoint,
@@ -95,7 +113,11 @@ document.addEventListener("DOMContentLoaded", () => {
     function renderTable(data) {
       const tableRows = data.map(item => `
         <tr data-program-key="${item.programKey}">
-          <td>${item.displayName}</td>
+          <td>
+            <a href="${item.programURL}" target="_blank" rel="noopener noreferrer">
+              ${item.displayName}
+            </a>
+          </td>
           <td>${item.balanceFormatted}</td>
           <td>${item.valuationFormatted}</td>
           <td>${item.totalWorthFormatted}</td>

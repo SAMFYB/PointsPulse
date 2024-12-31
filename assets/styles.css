@@ -60,6 +60,15 @@ h1 {
   padding: 15px 20px; /* Adequate padding for cells */
 }
 
+#balances table td a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+#balances table td a:hover {
+  text-decoration: underline;
+}
+
 #balances table tbody tr,
 #history table tbody tr {
   border-bottom: 1px solid #dddddd; /* Light gray border between rows */
