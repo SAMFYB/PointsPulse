@@ -29,51 +29,47 @@ Track and manage your loyalty points and miles across multiple programs, all in 
 
 ## Supported Programs
 
-Below is a **partial list** of recognized loyalty programs with direct links (as configured in `programURLs`). Clicking these links from the Dashboard will open the official site, triggering content scripts if the site is supported.
+Below is a list of recognized loyalty programs with direct links (as configured in `programURLs`). Clicking these links from the Dashboard will open the official site, triggering content scripts if the site is supported.
 
-### Credit Card Points & Miles
-- **American Express Membership Rewards**  
-  [americanexpress.com](https://americanexpress.com)
-- **Bilt Rewards**  
-  [bilt.com](https://www.bilt.com/)
-- **Capital One Miles**  
-  [capitalone.com](https://www.capitalone.com/)
-- **Chase Ultimate Rewards**  
-  [chase.com](https://www.chase.com/)
-- **Citi ThankYou Rewards**  
-  [citi.com](https://www.citi.com/)
-- **Wells Fargo Rewards**  
-  [wellsfargo.com](https://www.wellsfargo.com/)
+### Bank Points
 
-### Airline Programs
-- **Air Canada Aeroplan**  
-  [aircanada.com/aeroplan](https://www.aircanada.com/aeroplan)
-- **Alaska Airlines Mileage Plan**  
-  [alaskaair.com](https://www.alaskaair.com/)
-- **American Airlines AAdvantage**  
-  [aa.com](https://www.aa.com/)
-- **Delta Air Lines SkyMiles**  
-  [delta.com](https://www.delta.com/)
-- **United Airlines MileagePlus**  
-  [united.com](https://www.united.com/)
-- **Southwest Airlines Rapid Rewards**  
-  [southwest.com](https://www.southwest.com/)
+| Program                                | Official Website                                    |
+|----------------------------------------|------------------------------------------------------|
+| American Express Membership Rewards    | [https://americanexpress.com/](https://americanexpress.com/) |
+| Bilt Rewards                           | [https://www.bilt.com/](https://www.bilt.com/)      |
+| Capital One Miles                      | [https://www.capitalone.com/](https://www.capitalone.com/) |
+| Chase Ultimate Rewards                 | [https://www.chase.com/](https://www.chase.com/)    |
+| Citi ThankYou Rewards                  | [https://www.citi.com/](https://www.citi.com/)      |
+| Wells Fargo Rewards                    | [https://www.wellsfargo.com/](https://www.wellsfargo.com/) |
 
-*(And many more, including Emirates Skywards, Etihad Guest, Flying Blue, JetBlue TrueBlue, Virgin Atlantic Flying Club, etc.)*
+### Airline Miles
 
-### Hotel Programs
-- **Hilton Honors**  
-  [hilton.com/en/hilton-honors/](https://www.hilton.com/en/hilton-honors/)
-- **IHG One Rewards**  
-  [ihg.com](https://www.ihg.com/)
-- **Marriott Bonvoy**  
-  [marriott.com](https://www.marriott.com/)
-- **World of Hyatt**  
-  [hyatt.com](https://www.hyatt.com/)
-- **Wyndham Rewards**  
-  [wyndhamhotels.com/wyndham-rewards](https://www.wyndhamhotels.com/wyndham-rewards)
+| Program                                 | Official Website                                         |
+|-----------------------------------------|-----------------------------------------------------------|
+| Air Canada Aeroplan                     | [https://www.aircanada.com/aeroplan](https://www.aircanada.com/aeroplan) |
+| Alaska Airlines Mileage Plan            | [https://www.alaskaair.com/](https://www.alaskaair.com/) |
+| American Airlines AAdvantage            | [https://www.aa.com/](https://www.aa.com/)               |
+| Delta Air Lines SkyMiles                | [https://www.delta.com/](https://www.delta.com/)         |
+| United Airlines MileagePlus             | [https://www.united.com/](https://www.united.com/)       |
+| Southwest Airlines Rapid Rewards        | [https://www.southwest.com/](https://www.southwest.com/) |
+| Emirates Skywards                       | [https://www.emirates.com/](https://www.emirates.com/)   |
+| Etihad Airways Guest                    | [https://www.etihad.com/](https://www.etihad.com/)       |
+| Flying Blue (Air France/KLM)           | [https://www.flyingblue.com/](https://www.flyingblue.com/) |
+| JetBlue TrueBlue                        | [https://www.jetblue.com/](https://www.jetblue.com/)     |
+| Turkish Airlines Miles&Smiles           | [https://www.turkishairlines.com/](https://www.turkishairlines.com/) |
+| Virgin Atlantic Flying Club             | [https://www.virginatlantic.com/](https://www.virginatlantic.com/) |
 
-*(More can be added to your `programURLs` mapping as desired.)*
+### Hotel Points
+
+| Program                | Official Website                                                    |
+|------------------------|--------------------------------------------------------------------|
+| Hilton Honors          | [https://www.hilton.com/en/hilton-honors/](https://www.hilton.com/en/hilton-honors/) |
+| IHG One Rewards        | [https://www.ihg.com/](https://www.ihg.com/)                       |
+| Marriott Bonvoy        | [https://www.marriott.com/](https://www.marriott.com/)             |
+| World of Hyatt         | [https://www.hyatt.com/](https://www.hyatt.com/)                   |
+| Wyndham Rewards        | [https://www.wyndhamhotels.com/wyndham-rewards](https://www.wyndhamhotels.com/wyndham-rewards) |
+
+*(More can be added or removed to your `programURLs` mapping as desired.)*
 
 ---
 
