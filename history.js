@@ -33,7 +33,7 @@ function displayHistoricalData(programKey) {
     const { displayName, history } = programData[programKey];
 
     // Update the program name in the header
-    document.getElementById("program-name").textContent = `${displayName} - Historical Data`;
+    document.getElementById("program-name").textContent = `${displayName} - Balance History`;
 
     if (!history || history.length === 0) {
       document.getElementById("history").innerHTML = `<p>No historical data available for this program.</p>`;

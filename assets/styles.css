@@ -2,9 +2,9 @@
 
 /* 1. Base Styles */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f0f2f5; /* Light gray background for a clean look */
-  color: #333; /* Dark gray text for better readability */
+  font-family: 'Fira Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+  background-color: #f1f3f5; /* gray 1 background for a clean look */
+  color: #212529; /* gray 9 text for better readability */
   margin: 0;
   padding: 20px;
   font-size: 18px; /* Larger base font size for improved readability */
@@ -14,7 +14,7 @@ body {
 h1 {
   text-align: center; /* Center the title */
   font-size: 2.5em; /* Increase font size */
-  color: #2c3e50; /* Dark blue-gray color for the title */
+  color: #343a40; /* gray 8 for the title */
   margin-bottom: 40px; /* Space below the title */
 }
 
@@ -39,7 +39,7 @@ h1 {
 
 #balances table thead tr,
 #history table thead tr {
-  background-color: #4CAF50; /* Green background for header */
+  background-color: #40c057; /* green 6 background for header */
   color: #f8f9fa; /* gray 0 text for header */
   text-align: left;
 }
@@ -50,7 +50,7 @@ h1 {
 }
 
 #balances table thead th:hover {
-  background-color: #45a049; /* Darker green on hover */
+  background-color: #37b24d; /* green 7 background for header on hover */
 }
 
 #balances table th,
@@ -61,7 +61,7 @@ h1 {
 }
 
 #balances table td a {
-  color: #1971c2; /* blue 8 for links */
+  color: #2b8a3e; /* green 9 for links */
   text-decoration: none;
 }
 
@@ -71,22 +71,17 @@ h1 {
 
 #balances table tbody tr,
 #history table tbody tr {
-  border-bottom: 1px solid #dddddd; /* Light gray border between rows */
+  border-bottom: 1px solid #ced4da; /* gray 4 border between rows */
 }
 
 #balances table tbody tr:nth-child(even),
 #history table tbody tr:nth-child(even) {
-  background-color: #f9f9f9; /* Light gray background for even rows */
-}
-
-#balances table tbody tr:hover,
-#history table tbody tr:hover {
-  background-color: #f1f1f1; /* Slightly darker gray on hover */
+  background-color: #e9ecef; /* gray 2 background for even rows */
 }
 
 #balances table tbody tr:last-of-type,
 #history table tbody tr:last-of-type {
-  border-bottom: 2px solid #4CAF50; /* Thicker border for the last row */
+  border-bottom: 2px solid #37b24d; /* Thicker green 7 border for the last row */
 }
 
 /* 5. No Balances Message */
@@ -106,6 +101,7 @@ h1 {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-family: 'Fira Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
   font-size: 1em;
 }
 
