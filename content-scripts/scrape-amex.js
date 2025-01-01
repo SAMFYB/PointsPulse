@@ -2,7 +2,7 @@
 (function() {
   const config = {
     programKey: "American_Express_Membership_Rewards",
-    displayName: "American Express Membership Rewards",
+    displayName: "Membership Rewards",
     selectors: {},
     parsers: {
       balance: () => {
