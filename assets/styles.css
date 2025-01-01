@@ -84,6 +84,20 @@ h1 {
   border-bottom: 2px solid #37b24d; /* Thicker green 7 border for the last row */
 }
 
+/* Right-align middle three columns:
+   2nd column (Balance),
+   3rd column (Valuation),
+   4th column (Total Worth)
+*/
+#balances table thead th:nth-child(2),
+#balances table thead th:nth-child(3),
+#balances table thead th:nth-child(4),
+#balances table tbody td:nth-child(2),
+#balances table tbody td:nth-child(3),
+#balances table tbody td:nth-child(4) {
+  text-align: right; /* Right-align these columns */
+}
+
 /* 5. No Balances Message */
 #balances p,
 #history p {

@@ -46,12 +46,12 @@ function displayHistoricalData(programKey) {
     // Create table rows for historical data
     const tableRows = sortedHistory.map((entry) => {
       const dateStr = new Date(entry.timestamp).toLocaleString('en-US', {
-        year: 'numeric',
-        month: 'numeric',
-        day: 'numeric',
-        hour: 'numeric',
-        minute: 'numeric',
-        hour12: true // Use 12-hour format (AM/PM)
+        year: '2-digit',       // e.g., "24" instead of "2024"
+        month: '2-digit',      // e.g., "12" instead of "December"
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: false
       });
       const balanceFormatted = typeof entry.balance === 'number' ?
         entry.balance.toLocaleString('en-US') :

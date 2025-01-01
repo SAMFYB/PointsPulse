@@ -74,12 +74,12 @@ document.addEventListener("DOMContentLoaded", () => {
       // Last entry is the latest snapshot
       const lastEntry = history[history.length - 1];
       const dateStr = new Date(lastEntry.timestamp).toLocaleString('en-US', {
-        year: 'numeric',
-        month: 'numeric',
-        day: 'numeric',
-        hour: 'numeric',
-        minute: 'numeric',
-        hour12: true // Use 12-hour format (AM/PM)
+        year: '2-digit',       // e.g., "24" instead of "2024"
+        month: '2-digit',      // e.g., "12" instead of "December"
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: false
       });
 
       // Retrieve the valuation for the program; default to 0 if not defined
