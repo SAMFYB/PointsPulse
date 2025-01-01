@@ -20,6 +20,7 @@
   "host_permissions": [
     "*://*.americanexpress.com/*",
     "*://*.biltrewards.com/*",
+    "*://*.usbank.com/*",
     "*://*.aa.com/*",
     "*://*.delta.com/*",
     "*://*.united.com/*",
@@ -38,6 +39,10 @@
     {
       "matches": ["https://www.biltrewards.com/"],
       "js": ["content-scripts/scrape-bilt.js"]
+    },
+    {
+      "matches": ["https://onlinebanking.usbank.com/digital/servicing/rewards-management"],
+      "js": ["content-scripts/scrape-uar.js"]
     },
     {
       "matches": ["https://www.aa.com/homePage.do"],

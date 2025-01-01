@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
       Capital_One: 1.85,
       Chase_Ultimate_Rewards: 2.05,
       Citi_ThankYou_Rewards: 1.8,
+      U_S_Bank_Altitude_Reserve: 1.5,
       Wells_Fargo_Rewards: 1.6,
       // For airline points and miles
       Air_Canada_Aeroplan: 1.5,
@@ -52,6 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // For credit card points and miles
       American_Express_Membership_Rewards: "https://global.americanexpress.com/overview",
       Bilt_Rewards: "https://www.biltrewards.com/",
+      U_S_Bank_Altitude_Reserve: "https://onlinebanking.usbank.com/digital/servicing/rewards-management",
       // For airline points and miles
       American_Airlines_AAdvantage: "https://www.aa.com/aadvantage-program/profile/account-summary",
       Avios: "",
