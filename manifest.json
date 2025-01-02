@@ -24,7 +24,8 @@
     "*://*.aa.com/*",
     "*://*.delta.com/*",
     "*://*.united.com/*",
-    "*://*.hilton.com/*"
+    "*://*.hilton.com/*",
+    "*://*.marriott.com/*"
   ],
   // We define a default popup when user clicks extension icon
   "action": {
@@ -63,6 +64,10 @@
     {
       "matches": ["https://www.hilton.com/en/hilton-honors/guest/my-account/"],
       "js": ["content-scripts/scrape-hilton.js"]
+    },
+    {
+      "matches": ["https://www.marriott.com/loyalty/myAccount/default.mi"],
+      "js": ["content-scripts/scrape-marriott.js"]
     }
   ],
   // We need these files to be accessible so we can load them in the dashboard
