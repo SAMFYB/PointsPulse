@@ -33,41 +33,42 @@ Below is a list of recognized loyalty programs with direct links (as configured 
 
 ### Bank Points
 
-| Program                                | Official Website                                    |
+| Program                                | Official Website                                     |
 |----------------------------------------|------------------------------------------------------|
-| American Express Membership Rewards    | [https://americanexpress.com/](https://americanexpress.com/) |
-| Bilt Rewards                           | [https://www.bilt.com/](https://www.bilt.com/)      |
-| Capital One Miles                      | [https://www.capitalone.com/](https://www.capitalone.com/) |
-| Chase Ultimate Rewards                 | [https://www.chase.com/](https://www.chase.com/)    |
-| Citi ThankYou Rewards                  | [https://www.citi.com/](https://www.citi.com/)      |
-| Wells Fargo Rewards                    | [https://www.wellsfargo.com/](https://www.wellsfargo.com/) |
+| American Express Membership Rewards    | https://global.americanexpress.com/overview          |
+| Bilt Rewards                           | https://www.biltrewards.com/                         |
+| Capital One Miles                      | :pushpin: |
+| Chase Ultimate Rewards                 | :pushpin: |
+| Citi ThankYou Rewards                  | :pushpin: |
+| U.S. Bank Altitude Reserve             | https://onlinebanking.usbank.com/digital/servicing/rewards-management |
+| Wells Fargo Rewards                    | :pushpin: |
 
 ### Airline Miles
 
-| Program                                 | Official Website                                         |
+| Program                                 | Official Website                                          |
 |-----------------------------------------|-----------------------------------------------------------|
-| Air Canada Aeroplan                     | [https://www.aircanada.com/aeroplan](https://www.aircanada.com/aeroplan) |
-| Alaska Airlines Mileage Plan            | [https://www.alaskaair.com/](https://www.alaskaair.com/) |
-| American Airlines AAdvantage            | [https://www.aa.com/](https://www.aa.com/)               |
-| Delta Air Lines SkyMiles                | [https://www.delta.com/](https://www.delta.com/)         |
-| United Airlines MileagePlus             | [https://www.united.com/](https://www.united.com/)       |
-| Southwest Airlines Rapid Rewards        | [https://www.southwest.com/](https://www.southwest.com/) |
-| Emirates Skywards                       | [https://www.emirates.com/](https://www.emirates.com/)   |
-| Etihad Airways Guest                    | [https://www.etihad.com/](https://www.etihad.com/)       |
-| Flying Blue (Air France/KLM)           | [https://www.flyingblue.com/](https://www.flyingblue.com/) |
-| JetBlue TrueBlue                        | [https://www.jetblue.com/](https://www.jetblue.com/)     |
-| Turkish Airlines Miles&Smiles           | [https://www.turkishairlines.com/](https://www.turkishairlines.com/) |
-| Virgin Atlantic Flying Club             | [https://www.virginatlantic.com/](https://www.virginatlantic.com/) |
+| Air Canada Aeroplan                     | :pushpin: |
+| Alaska Airlines Mileage Plan            | :pushpin: |
+| American Airlines AAdvantage            | https://www.aa.com/homePage.do <br> https://www.aa.com/aadvantage-program/profile/account-summary |
+| Delta Air Lines SkyMiles                | https://www.delta.com/myprofile/personal-details |
+| United Airlines MileagePlus             | https://www.united.com/en/us/myunited |
+| Southwest Airlines Rapid Rewards        | :pushpin: |
+| Emirates Skywards                       | :pushpin: |
+| Etihad Airways Guest                    | :pushpin: |
+| Flying Blue (Air France/KLM)            | :pushpin: |
+| JetBlue TrueBlue                        | :pushpin: |
+| Turkish Airlines Miles&Smiles           | :pushpin: |
+| Virgin Atlantic Flying Club             | :pushpin: |
 
 ### Hotel Points
 
 | Program                | Official Website                                                    |
 |------------------------|--------------------------------------------------------------------|
-| Hilton Honors          | [https://www.hilton.com/en/hilton-honors/](https://www.hilton.com/en/hilton-honors/) |
-| IHG One Rewards        | [https://www.ihg.com/](https://www.ihg.com/)                       |
-| Marriott Bonvoy        | [https://www.marriott.com/](https://www.marriott.com/)             |
-| World of Hyatt         | [https://www.hyatt.com/](https://www.hyatt.com/)                   |
-| Wyndham Rewards        | [https://www.wyndhamhotels.com/wyndham-rewards](https://www.wyndhamhotels.com/wyndham-rewards) |
+| Hilton Honors          | https://www.hilton.com/en/hilton-honors/guest/my-account/ |
+| IHG One Rewards        | :pushpin: |
+| Marriott Bonvoy        | https://www.marriott.com/loyalty/myAccount/default.mi |
+| World of Hyatt         | :pushpin: |
+| Wyndham Rewards        | :pushpin: |
 
 *(More can be added or removed to your `programURLs` mapping as desired.)*
 
