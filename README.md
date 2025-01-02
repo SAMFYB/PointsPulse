@@ -48,7 +48,7 @@ Below is a list of recognized loyalty programs with direct links (as configured 
 | Program                                 | Official Website                                          |
 |-----------------------------------------|-----------------------------------------------------------|
 | Air Canada Aeroplan                     | :pushpin: |
-| Alaska Airlines Mileage Plan            | :pushpin: |
+| Alaska Airlines Mileage Plan            | https://www.alaskaair.com/account/overview |
 | American Airlines AAdvantage            | https://www.aa.com/homePage.do <br> https://www.aa.com/aadvantage-program/profile/account-summary |
 | Delta Air Lines SkyMiles                | https://www.delta.com/myprofile/personal-details |
 | United Airlines MileagePlus             | https://www.united.com/en/us/myunited |
