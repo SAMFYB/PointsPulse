@@ -84,17 +84,20 @@ h1 {
   border-bottom: 2px solid #37b24d; /* Thicker green 7 border for the last row */
 }
 
-/* Right-align middle three columns:
+/* Right-align middle three columns of dashboard balance table:
    2nd column (Balance),
    3rd column (Valuation),
-   4th column (Total Worth)
+   4th column (Total Worth);
+   And last column (Balance) of history balance table.
 */
 #balances table thead th:nth-child(2),
 #balances table thead th:nth-child(3),
 #balances table thead th:nth-child(4),
 #balances table tbody td:nth-child(2),
 #balances table tbody td:nth-child(3),
-#balances table tbody td:nth-child(4) {
+#balances table tbody td:nth-child(4),
+#history table thead th:nth-child(2),
+#history table tbody td:nth-child(2) {
   text-align: right; /* Right-align these columns */
 }
 

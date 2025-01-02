@@ -71,7 +71,7 @@ function displayHistoricalData(programKey) {
       <table>
         <thead>
           <tr>
-            <th>Date</th>
+            <th>Updated</th>
             <th>Balance</th>
           </tr>
         </thead>
