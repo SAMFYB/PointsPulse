@@ -2,6 +2,13 @@
 
 Track and manage your loyalty points and miles across multiple programs, all in one convenient dashboard. **PointsPulse** automatically scrapes balances from each program’s site, stores historical data, calculates valuations, and lets you see your total balance worth at a glance. You can also quickly refresh your balances by clicking links that navigate you directly to each program’s page, triggering the content scripts to scrape the latest data.
 
+<img src="./assets/demo/popup.png" width="250">
+
+![Dashboard No Balance](./assets/demo/no_bal_msg.png)
+![Dashboard](./assets/demo/bal_tbl.png)
+![Dashboard Sorted by Total Worth](./assets/demo/bal_tbl_srt.png)
+![Balance History Page](./assets/demo/hist_pg.png)
+
 ## Key Features
 
 1. **Automatic Balance Scraping**  
