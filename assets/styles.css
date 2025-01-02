@@ -114,6 +114,11 @@ h1 {
 }
 
 /* 6. Back Button */
+#footer {
+  max-width: 1200px; /* Set a maximum width for the container */
+  margin: 0 auto 60px auto; /* Center the container and add bottom margin */
+}
+
 #back-button {
   margin-bottom: 20px;
   padding: 8px 16px;
