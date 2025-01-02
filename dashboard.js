@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
       United_Airlines_MileagePlus: "https://www.united.com/en/us/myunited",
       // For hotel points
       Hilton_Honors: "https://www.hilton.com/en/hilton-honors/guest/my-account/",
-      Marriott_Bonvoy: "",
+      Marriott_Bonvoy: "https://www.marriott.com/loyalty/myAccount/default.mi",
       World_of_Hyatt: "",
     };
 
