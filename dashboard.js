@@ -118,9 +118,10 @@ document.addEventListener("DOMContentLoaded", () => {
       const tableRows = data.map(item => `
         <tr data-program-key="${item.programKey}">
           <td>
-            <a href="${item.programURL}" target="_blank" rel="noopener noreferrer">
-              ${item.displayName}
+            <a href="${item.programURL}" class="external-link-icon" target="_blank" rel="noopener noreferrer">
+              <i class="fa fa-external-link" aria-hidden="true"></i>
             </a>
+            ${item.displayName}
           </td>
           <td>${item.balanceFormatted}</td>
           <td>${item.valuationFormatted}</td>

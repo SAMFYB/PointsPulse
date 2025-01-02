@@ -81,7 +81,8 @@
       "resources": [
         "dashboard.html",
         "history.html",
-        "assets/styles.css"
+        "assets/styles.css",
+        "assets/lib/font-awesome-4.7.0/css/font-awesome.min.css"
       ],
       "matches": ["<all_urls>"]
     }
