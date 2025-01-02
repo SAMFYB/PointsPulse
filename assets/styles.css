@@ -61,7 +61,7 @@ h1 {
 }
 
 #balances table td a {
-  color: #2b8a3e; /* green 9 for links */
+  color: #2f9e44; /* green 8 for links */
   text-decoration: none;
 }
 
@@ -99,6 +99,10 @@ h1 {
 #history table thead th:nth-child(2),
 #history table tbody td:nth-child(2) {
   text-align: right; /* Right-align these columns */
+}
+
+#balances table tbody td:nth-child(1) {
+  font-weight: bold;
 }
 
 /* 5. No Balances Message */
