@@ -55,6 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
       Bilt_Rewards: "https://www.biltrewards.com/",
       U_S_Bank_Altitude_Reserve: "https://onlinebanking.usbank.com/digital/servicing/rewards-management",
       // For airline points and miles
+      Alaska_Airlines_Mileage_Plan: "https://www.alaskaair.com/account/overview",
       American_Airlines_AAdvantage: "https://www.aa.com/aadvantage-program/profile/account-summary",
       Avios: "",
       Cathay_Asia_Miles: "",

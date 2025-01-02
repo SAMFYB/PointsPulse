@@ -21,6 +21,7 @@
     "*://*.americanexpress.com/*",
     "*://*.biltrewards.com/*",
     "*://*.usbank.com/*",
+    "*://*.alaskaair.com/*",
     "*://*.aa.com/*",
     "*://*.delta.com/*",
     "*://*.united.com/*",
@@ -44,6 +45,10 @@
     {
       "matches": ["https://onlinebanking.usbank.com/digital/servicing/rewards-management"],
       "js": ["content-scripts/scrape-uar.js"]
+    },
+    {
+      "matches": ["https://www.alaskaair.com/account/overview"],
+      "js": ["content-scripts/scrape-alaskaair.js"]
     },
     {
       "matches": ["https://www.aa.com/homePage.do"],
