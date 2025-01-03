@@ -33,6 +33,10 @@ h1 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
+#history {
+  max-width: 900px;
+}
+
 /* 4. Styled Table */
 #balances table,
 #history table {
@@ -101,7 +105,7 @@ h1 {
   color: #495057; /* gray 7 color for bold program names column */
 }
 
-.external-link-icon {
+.link-icon {
   text-decoration: none;
   margin-right: 0.5rem;
   color: #2b8a3e; /* green 9 color for link icon */
@@ -115,29 +119,7 @@ h1 {
   color: #495057; /* gray 7 for no balances message */
 }
 
-/* 6. Back Button */
-#footer {
-  max-width: 1200px; /* Set a maximum width for the container */
-  margin: 0 auto 60px auto; /* Center the container and add bottom margin */
-}
-
-#back-button {
-  margin-bottom: 20px;
-  padding: 8px 16px;
-  background-color: #2f9e44; /* green 8 for history page back button */
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-family: 'Fira Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
-  font-size: 1em;
-}
-
-#back-button:hover {
-  background-color: #2b8a3e; /* green 9 for history page back button on hover */
-}
-
-/* 7. Accessibility Enhancements */
+/* 6. Accessibility Enhancements */
 #balances table th,
 #history table th {
   scope: col; /* Define scope for accessibility */

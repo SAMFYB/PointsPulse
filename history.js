@@ -83,11 +83,6 @@ function displayHistoricalData(programKey) {
   });
 }
 
-// Handle back button click
-document.getElementById("back-button").addEventListener("click", () => {
-  window.history.back(); // Navigate back to the previous page (dashboard)
-});
-
 // On DOM load
 document.addEventListener("DOMContentLoaded", () => {
   const params = parseQueryParams();

@@ -118,8 +118,11 @@ document.addEventListener("DOMContentLoaded", () => {
       const tableRows = data.map(item => `
         <tr data-program-key="${item.programKey}">
           <td>
-            <a href="${item.programURL}" class="external-link-icon" target="_blank" rel="noopener noreferrer">
+            <a href="${item.programURL}" class="link-icon" target="_blank" rel="noopener noreferrer">
               <i class="fa fa-external-link" aria-hidden="true"></i>
+            </a>
+            <a href="history.html?program=${encodeURIComponent(item.programKey)}" class="link-icon" target="_blank" rel="noopener noreferrer">
+              <i class="fa fa-history" aria-hidden="true"></i>
             </a>
             ${item.displayName}
           </td>
@@ -151,19 +154,6 @@ document.addEventListener("DOMContentLoaded", () => {
             Valuation data last updated on ${valuationUpdateTimestamp}
           </p>
         `;
-
-        // Add click event listeners to each row
-        const rows = balancesDiv.querySelectorAll('tbody tr');
-        rows.forEach((row) => {
-          row.addEventListener('click', () => {
-            const programKey = row.getAttribute('data-program-key');
-            if (programKey) {
-              // Navigate to history.html with the programKey as a query parameter
-              const historyPage = `history.html?program=${encodeURIComponent(programKey)}`;
-              window.location.href = historyPage;
-            }
-          });
-        });
 
         // Add sorting functionality
         addSortingFunctionality();
