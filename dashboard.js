@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // For credit card points and miles
       American_Express_Membership_Rewards: "https://global.americanexpress.com/overview",
       Bilt_Rewards: "https://www.biltrewards.com/",
-      U_S_Bank_Altitude_Reserve: "https://onlinebanking.usbank.com/digital/servicing/rewards-management",
+      U_S_Bank_Altitude_Reserve: "https://onlinebanking.usbank.com/digital/servicing/shellapp/#/rewards-management",
       // For airline points and miles
       Alaska_Airlines_Mileage_Plan: "https://www.alaskaair.com/account/overview",
       American_Airlines_AAdvantage: "https://www.aa.com/aadvantage-program/profile/account-summary",

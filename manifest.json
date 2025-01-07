@@ -43,7 +43,7 @@
       "js": ["content-scripts/scrape-bilt.js"]
     },
     {
-      "matches": ["https://onlinebanking.usbank.com/digital/servicing/rewards-management"],
+      "matches": ["https://onlinebanking.usbank.com/digital/servicing/shellapp/#/rewards-management"],
       "js": ["content-scripts/scrape-uar.js"]
     },
     {
